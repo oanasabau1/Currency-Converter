@@ -12,8 +12,7 @@ public class ConverterView {
 
     ConverterView(ConverterModel model) {
         this.model = model;
-        frame = new JFrame();
-        frame.setTitle("Currency Converter");
+        frame = new JFrame("Currency Converter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(500, 350, 600, 300);
         panel = new JPanel();
