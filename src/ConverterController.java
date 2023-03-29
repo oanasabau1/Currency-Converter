@@ -1,65 +1,63 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class ConverterController implements ActionListener {
+public class ConverterController implements ActionListener, ItemListener {
     ConverterModel model;
     ConverterView view;
 
     public ConverterController(ConverterModel model, ConverterView view) {
-        this.model=model;
-        this.view = view;
+        this.model = model;
+        this.view=view;
+
+        // Add action listener for convert button
+        view.convert.addActionListener(this);
+
+        // Add item listeners for JComboBoxes
+        view.toConvert.addItemListener(this);
+        view.toBeConverted.addItemListener(this);
     }
 
-     view.convert.addActionListener(this);
-        view.valoareDeconvertedPanel.addItemListener(new java.awt.event.ItemListener() {
-        public void itemStateChanged(ItemEvent evt) {
-            primaSelectie(evt);
-        }
-    });
-        view.valoareconvertedPanela.addItemListener(new java.awt.event.ItemListener() {
-        public void itemStateChanged(ItemEvent evt) {
-            aDouaSelectie(evt);
-        }
-    });
-
-    public void primaSelectie(ItemEvent e) {
-        if (e.getStateChange() == ItemEvent.SELECTED) {
-            if (e.getSource() == valoareDeconvertedPanel) {
-                int pozitie = valoareDeconvertedPanel.getSelectedIndex();
-                if (pozitie != 0) {
-                    view.message.setText("1 " + model.money[pozitie].substring(0, 3) + " =");
-                    view.initialValue.setText(model.money[pozitie].substring(0, 3));
-                } else {
-                    view.message.setText("Convertor Valutar");
-                    view.initialValue.setText(" ");
-                }
-            }
-        }
-    }
-
-    public void aDouaSelectie(ItemEvent e) {
-        int pozitie = valoareconvertedPanela.getSelectedIndex();
-        double valoare=-1.0;
-        //folosind instructiunea switch, determinam intre care unitati moentare se face convertirea si alegem valoarea
-
-
-    if (valoareDeconvertedPanel.getSelectedIndex() == 0  || pozitie==0) {  //daca nu este selectata nicio unitate, adica ne aflam pe "Selecteaza unitatea monetara..."
-        initialValue.setText(" ");
-        finalValue.setText(" ");
-        message.setText("Convertor Valutar");
-    } else {
-        view.message.setText("1 " + money[valoareDeconvertedPanel.getSelectedIndex()].substring(0, 3) + " = " + valoare + " " + model.money[pozitie].substring(0, 3));
-        finalValue.setText(money[pozitie].substring(0, 3));
-    }
-
+    @Override
     public void actionPerformed(ActionEvent e) {
+        // Check if convert button was clicked
         if (e.getSource() == view.convert) {
-            if (view.valoareDeconvertedPanel.getSelectedIndex() == 0 || view.valoareconvertedPanela.getSelectedIndex() == 0) {
-                JOptionPane.showMessageDialog(null, "Invalid Input", "Getting Error", JOptionPane.ERROR_MESSAGE);
+            // Get selected currencies from JComboBoxes
+            String fromCurrency = (String) view.toConvert.getSelectedItem();
+            String toCurrency = (String) view.toBeConverted.getSelectedItem();
 
-            } else { //calcularea resultului
+            // Validate input
+            String input = view.initialSum.getText();
+            if (input.isEmpty()) {
+                JOptionPane.showMessageDialog(view.frame, "Please enter a valid input", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-}
+            // Convert input to double
+            double amount;
+            try {
+                amount = Double.parseDouble(input);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(view.frame, "Please enter a valid number", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
+            // Convert currency and update final result text field
+            double result = model.convertCurrency(amount, fromCurrency, toCurrency);
+            view.finalResult.setText(String.format("%.2f", result));
+        }
+    }
 
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+        if (e.getStateChange() == ItemEvent.SELECTED) {
+            // Get selected currencies from JComboBoxes
+            String fromCurrency = (String) view.toConvert.getSelectedItem();
+            String toCurrency = (String) view.toBeConverted.getSelectedItem();
+
+            // Update initial value label and message label based on selected currencies
+            view.initialValue.setText(fromCurrency);
+            view.message.setText(String.format("1 %s = %s %s", fromCurrency, toCurrency));
+
+        }
+    }
 }

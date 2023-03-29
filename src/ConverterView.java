@@ -12,6 +12,7 @@ public class ConverterView {
 
     ConverterView(ConverterModel model) {
         this.model = model;
+
         frame = new JFrame("Currency Converter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(500, 350, 600, 300);
@@ -54,7 +55,7 @@ public class ConverterView {
         p2.add(result);
         p2.add(finalResult);
         p2.add(finalValue);
-        convert = new JButton("Calculate");
+        convert = new JButton("Convert");
         calculate.add(p1);
         calculate.add(convert);
         calculate.add(p2);

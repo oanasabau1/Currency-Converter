@@ -81,513 +81,511 @@ public class ConverterModel {
             "GBP - British Pound Sterling",
             "HUF - Hungarian forint"
     };
-    
-    public double selectValueForConversion (String valueToConvert, String valueToBeConverted) {
-        double value=0.0;
-    switch (valueToConvert) {
-        case "RON - Romanian leu": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = RON_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = RON_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = RON_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = RON_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = RON_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = RON_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = RON_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = RON_TO_HUF;
-                    break;
-                default:
+
+    public double selectValueForConversion(String valueToConvert, String valueToBeConverted) {
+        double value = 0.0;
+        switch (valueToConvert) {
+            case "RON - Romanian leu": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = RON_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = RON_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = RON_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = RON_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = RON_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = RON_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = RON_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = RON_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "EUR - Euro": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = EURO_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = EURO_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = EURO_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = EURO_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = EURO_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = EURO_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = EURO_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = EURO_TO_HUF;
-                    break;
-                default:
+            break;
+            case "EUR - Euro": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = EURO_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = EURO_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = EURO_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = EURO_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = EURO_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = EURO_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = EURO_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = EURO_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "USD - U.S. dollar": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = USD_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = USD_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = USD_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = USD_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = USD_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = USD_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = USD_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = USD_TO_HUF;
-                    break;
-                default:
+            break;
+            case "USD - U.S. dollar": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = USD_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = USD_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = USD_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = USD_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = USD_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = USD_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = USD_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = USD_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "CAD - Canadian dollar": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = CAD_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = CAD_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = CAD_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = CAD_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = CAD_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = CAD_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = CAD_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = CAD_TO_HUF;
-                    break;
-                default:
+            break;
+            case "CAD - Canadian dollar": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = CAD_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = CAD_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = CAD_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = CAD_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = CAD_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = CAD_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = CAD_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = CAD_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "CHF - Swiss franc": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = CHF_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = CHF_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = CHF_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = CHF_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = CHF_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = CHF_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = CHF_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = CHF_TO_HUF;
-                    break;
-                default:
+            break;
+            case "CHF - Swiss franc": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = CHF_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = CHF_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = CHF_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = CHF_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = CHF_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = CHF_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = CHF_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = CHF_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "MDL - Leul Moldovenesc": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = MDL_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = MDL_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = MDL_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = MDL_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = MDL_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = MDL_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = MDL_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = MDL_TO_HUF;
-                    break;
-                default:
+            break;
+            case "MDL - Moldavian leu": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = MDL_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = MDL_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = MDL_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = MDL_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = MDL_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = MDL_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = MDL_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = MDL_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "GBP - British Pound Sterling": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = GBP_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = GBP_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = GBP_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = GBP_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = GBP_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = GBP_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = GBP_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = GBP_TO_HUF;
-                    break;
-                default:
+            break;
+            case "GBP - British Pound Sterling": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = GBP_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = GBP_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = GBP_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = GBP_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = GBP_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = GBP_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = GBP_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = GBP_TO_HUF;
+                        break;
+                    default:
+                }
             }
-        }
-        break;
-        case "HUF - Hungarian forint": {
-            switch (valueToBeConverted) {
-                case "RON - Romanian leu":
-                    value = HUF_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    value = HUF_TO_EURO;
-                    break;
-                case "USD - U.S. dollar":
-                    value = HUF_TO_USD;
-                    break;
-                case "CAD - Canadian dollar":
-                    value = HUF_TO_CAD;
-                    break;
-                case "CHF - Swiss franc":
-                    value = HUF_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    value = HUF_TO_MDL;
-                    break;
-                case "GBP - British Pound Sterling":
-                    value = HUF_TO_GBP;
-                    break;
-                case "HUF - Hungarian forint":
-                    value = HUF_TO_HUF;
-                    break;
-                default:
+            break;
+            case "HUF - Hungarian forint": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        value = HUF_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        value = HUF_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        value = HUF_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        value = HUF_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        value = HUF_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        value = HUF_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        value = HUF_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        value = HUF_TO_HUF;
+                        break;
+                    default:
+                }
             }
+            break;
+            default:
+                value = 0.0;
         }
-        break;
-        default:
-            value=0.0;
+        return value;
     }
-    return value;
+
+    public double convertCurrency(Double input, String valueToConvert, String valueToBeConverted) {
+        double result = 0.0;
+        switch (valueToConvert) {
+            case "RON - Romanian leu": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * RON_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * RON_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * RON_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * RON_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * RON_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * RON_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * RON_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * RON_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "EUR - Euro": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * EURO_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * EURO_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * EURO_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * EURO_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * EURO_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * EURO_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * EURO_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * EURO_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "USD - U.S. dollar": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * USD_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * USD_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * USD_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * USD_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * USD_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * USD_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * USD_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * USD_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "CAD - Canadian dollar": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * CAD_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * CAD_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * CAD_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * CAD_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * CAD_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * CAD_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * CAD_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * CAD_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "CHF - Swiss franc": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * CHF_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * CHF_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * CHF_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * CHF_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * CHF_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * CHF_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * CHF_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * CHF_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "MDL - Moldavian leu": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * MDL_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * MDL_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * MDL_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * MDL_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * MDL_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * MDL_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * MDL_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * MDL_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "GBP - British Pound Sterling": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * GBP_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * GBP_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * GBP_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * GBP_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * GBP_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * GBP_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * GBP_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * GBP_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            case "HUF - Hungarian forint": {
+                switch (valueToBeConverted) {
+                    case "RON - Romanian leu":
+                        result = input * HUF_TO_RON;
+                        break;
+                    case "EUR - Euro":
+                        result = input * HUF_TO_EURO;
+                        break;
+                    case "USD - U.S. dollar":
+                        result = input * HUF_TO_USD;
+                        break;
+                    case "CAD - Canadian dollar":
+                        result = input * HUF_TO_CAD;
+                        break;
+                    case "CHF - Swiss franc":
+                        result = input * HUF_TO_CHF;
+                        break;
+                    case "MDL - Moldavian leu":
+                        result = input * HUF_TO_MDL;
+                        break;
+                    case "GBP - British Pound Sterling":
+                        result = input * HUF_TO_GBP;
+                        break;
+                    case "HUF - Hungarian forint":
+                        result = input * HUF_TO_HUF;
+                        break;
+                    default:
+                        result = input = 0.0;
+                }
+            }
+            break;
+            default:
+                result = input = 0.0;
+        }
+        return result;
+    }
 }
 
-public double calculateSum (String valueToConvert, String valueToBeConverted) {
-    double sumIntrodusa = Double.parseDouble(sumInitiala.getText());
-    double resultObtinut = 0.0;
-    switch (valueToConvert) {
-        case "RON - Leul romanesc": {
-            switch (valueToBeConverted) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * RON_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * RON_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * RON_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * RON_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * RON_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * RON_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * RON_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * RON_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "EUR - Euro": {
-            switch (valueToBeConverted) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * EURO_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * EURO_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * EURO_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * EURO_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * EURO_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * EURO_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * EURO_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * EURO_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "USD - Dolarul american": {
-            switch (valueToBeConverted) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * USD_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * USD_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * USD_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * USD_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * USD_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * USD_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * USD_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * USD_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "CAD - Dolarul canadian": {
-            switch (valoareconvertedPanela.getSelectedItem().toString()) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * CAD_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * CAD_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * CAD_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * CAD_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * CAD_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * CAD_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * CAD_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * CAD_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "CHF - Francul elvetian": {
-            switch (valueToBeConverted) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * CHF_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * CHF_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * CHF_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * CHF_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * CHF_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * CHF_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * CHF_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * CHF_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "MDL - Leul Moldovenesc": {
-            switch (valoareconvertedPanela.getSelectedItem().toString()) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * MDL_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * MDL_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * MDL_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * MDL_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * MDL_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * MDL_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * MDL_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * MDL_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "GBP - Lira Sterlina": {
-            switch (valoareconvertedPanela.getSelectedItem().toString()) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * GBP_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * GBP_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * GBP_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * GBP_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * GBP_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * GBP_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * GBP_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * GBP_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        case "HUF - Forint": {
-            switch (valoareconvertedPanela.getSelectedItem().toString()) {
-                case "RON - Leul romanesc":
-                    resultObtinut = sumIntrodusa * HUF_TO_RON;
-                    break;
-                case "EUR - Euro":
-                    resultObtinut = sumIntrodusa * HUF_TO_EURO;
-                    break;
-                case "USD - Dolarul american":
-                    resultObtinut = sumIntrodusa * HUF_TO_USD;
-                    break;
-                case "CAD - Dolarul canadian":
-                    resultObtinut = sumIntrodusa * HUF_TO_CAD;
-                    break;
-                case "CHF - Francul elvetian":
-                    resultObtinut = sumIntrodusa * HUF_TO_CHF;
-                    break;
-                case "MDL - Leul moldovenesc":
-                    resultObtinut = sumIntrodusa * HUF_TO_MDL;
-                    break;
-                case "GBP - Lira sterlina":
-                    resultObtinut = sumIntrodusa * HUF_TO_GBP;
-                    break;
-                case "HUF - Forint":
-                    resultObtinut = sumIntrodusa * HUF_TO_HUF;
-                    break;
-                default:
-                    resultObtinut = sumIntrodusa = 0.0;
-            }
-        }
-        break;
-        default:
-            resultObtinut = sumIntrodusa = 0.0;
-    }
-                resultFinal.setText(String.format("%.2f", resultObtinut));
-}
-        }
-                }
-}
