@@ -22,7 +22,7 @@ public class ConverterController implements ActionListener, ItemListener {
             String toCurrency = (String) view.toBeConverted.getSelectedItem();
             String input = view.initialSum.getText();
             if (input.isEmpty()) {
-                JOptionPane.showMessageDialog(view.frame, "Please enter a valid input", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(view.frame, "No input. Please enter a value and select the units for conversion.", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
             double amount;
@@ -32,9 +32,8 @@ public class ConverterController implements ActionListener, ItemListener {
                 JOptionPane.showMessageDialog(view.frame, "Please enter a valid number", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-
             double result = model.convertCurrency(amount, fromCurrency, toCurrency);
-            view.finalResult.setText(String.format("%.2f", result));
+            view.finalResult.setText(String.format("%f", result));
         }
     }
 
@@ -47,7 +46,7 @@ public class ConverterController implements ActionListener, ItemListener {
                 view.message.setText("Currency Converter");
             }
             else {
-                //set the labels with the money units
+                //set the labels according the selections made
                 view.initialValue.setText(fromCurrency.substring(0, 3));
                 view.finalValue.setText(toCurrency.substring(0, 3));
                 view.message.setText("1 " + fromCurrency.substring(0, 3) + " = " + model.selectValueForConversion(fromCurrency, toCurrency) + " " + toCurrency.substring(0, 3));

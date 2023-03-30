@@ -1,4 +1,7 @@
 public class ConverterModel {
+
+    // This declaration contains conversion rates between several currencies, each constant representing the exchange rate of one unit to another
+    // To extend the Currency Converter, new units and corresponding values can be added
     public static final double RON_TO_RON = 1.00;
     public static final double RON_TO_EURO = 0.20;
     public static final double RON_TO_USD = 0.22;
@@ -82,11 +85,12 @@ public class ConverterModel {
             "HUF - Hungarian forint"
     };
 
-    public double selectValueForConversion(String valueToConvert, String valueToBeConverted) {  //the method will return the conversion rate between the given currencies, as specified by the corrsponding constant in the code
+    public double selectValueForConversion(String fromCurrency, String toCurrency) {  //the method will return the conversion rate between the given currencies, as specified by the corrsponding constant in the code
         double value = 0.0;
-        switch (valueToConvert) {
+        //i use switch-case to select the value based on the name of the currency units
+        switch (fromCurrency) {
             case "RON - Romanian leu": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = RON_TO_RON;
                         break;
@@ -116,7 +120,7 @@ public class ConverterModel {
             }
             break;
             case "EUR - Euro": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = EURO_TO_RON;
                         break;
@@ -146,7 +150,7 @@ public class ConverterModel {
             }
             break;
             case "USD - U.S. dollar": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = USD_TO_RON;
                         break;
@@ -176,7 +180,7 @@ public class ConverterModel {
             }
             break;
             case "CAD - Canadian dollar": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = CAD_TO_RON;
                         break;
@@ -206,7 +210,7 @@ public class ConverterModel {
             }
             break;
             case "CHF - Swiss franc": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = CHF_TO_RON;
                         break;
@@ -236,7 +240,7 @@ public class ConverterModel {
             }
             break;
             case "MDL - Moldavian leu": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = MDL_TO_RON;
                         break;
@@ -266,7 +270,7 @@ public class ConverterModel {
             }
             break;
             case "GBP - British Pound Sterling": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = GBP_TO_RON;
                         break;
@@ -296,7 +300,7 @@ public class ConverterModel {
             }
             break;
             case "HUF - Hungarian forint": {
-                switch (valueToBeConverted) {
+                switch (toCurrency) {
                     case "RON - Romanian leu":
                         value = HUF_TO_RON;
                         break;
@@ -331,9 +335,9 @@ public class ConverterModel {
         return value;
     }
 
-    public double convertCurrency(Double input, String valueToConvert, String valueToBeConverted) {
-        double value = this.selectValueForConversion(valueToConvert, valueToBeConverted);
-        return value * input;
+    public double convertCurrency(Double amount, String fromCurrency, String toCurrency) {
+        double value = this.selectValueForConversion(fromCurrency, toCurrency);  //first we select the value of conversion between the units using the method above
+        return value * amount;
     }
 }
 

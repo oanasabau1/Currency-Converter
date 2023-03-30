@@ -2,10 +2,11 @@ import java.awt.* ;
 import javax.swing.*;
 
 public class ConverterView {
+    //creating and designing the GUI
     ConverterModel model;
     JFrame frame;
     JPanel panel, convertPanel, convertedPanel, calculate, p1, p2;
-    JLabel message, result, sum, initialValue, finalValue;
+    JLabel message, result, amount, initialValue, finalValue;
     JButton convert;
     JComboBox toConvert, toBeConverted;
     JTextField initialSum, finalResult;
@@ -37,11 +38,12 @@ public class ConverterView {
         calculate = new JPanel();
         calculate.setLayout(new FlowLayout());
         p1 = new JPanel();
-        sum = new JLabel("Sum");
-        sum.setFont(new Font("Rockwell", Font.BOLD | Font.ITALIC, 12));
+        amount = new JLabel("Amount");
+        amount.setFont(new Font("Rockwell", Font.BOLD | Font.ITALIC, 12));
         initialSum = new JTextField(10);
         initialValue = new JLabel(" ");
-        p1.add(sum);
+        initialValue.setFont(new Font("Rockwell", Font.BOLD, 12));
+        p1.add(amount);
         p1.add(initialSum);
         p1.add(initialValue);
         p2 = new JPanel();
@@ -49,10 +51,12 @@ public class ConverterView {
         result.setFont(new Font("Rockwell", Font.BOLD | Font.ITALIC, 12));
         finalResult = new JTextField(10);
         finalValue = new JLabel(" ");
+        finalValue.setFont(new Font("Rockwell", Font.BOLD, 12));
         p2.add(result);
         p2.add(finalResult);
         p2.add(finalValue);
         convert = new JButton("Convert");
+        convert.setFont(new Font("Rockwell", Font.BOLD, 12));
         calculate.add(p1);
         calculate.add(convert);
         calculate.add(p2);
