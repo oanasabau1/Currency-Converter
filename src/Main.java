@@ -3,6 +3,5 @@ public class Main{
         ConverterModel model=new ConverterModel();
         ConverterView view=new ConverterView(model);
         ConverterController controller=new ConverterController(model, view);
-
     }
 }

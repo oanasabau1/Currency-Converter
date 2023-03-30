@@ -14,8 +14,8 @@ public class ConverterView {
         this.model = model;
 
         frame = new JFrame("Currency Converter");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setBounds(500, 350, 600, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel = new JPanel();
         panel.setLayout(new BorderLayout());
         convertPanel = new JPanel();
@@ -34,10 +34,8 @@ public class ConverterView {
         panel.add(message, BorderLayout.PAGE_START);
         panel.add(convertPanel, BorderLayout.LINE_START);
         panel.add(convertedPanel, BorderLayout.LINE_END);
-
         calculate = new JPanel();
         calculate.setLayout(new FlowLayout());
-
         p1 = new JPanel();
         sum = new JLabel("Sum");
         sum.setFont(new Font("Rockwell", Font.BOLD | Font.ITALIC, 12));
@@ -46,7 +44,6 @@ public class ConverterView {
         p1.add(sum);
         p1.add(initialSum);
         p1.add(initialValue);
-
         p2 = new JPanel();
         result = new JLabel("Result");
         result.setFont(new Font("Rockwell", Font.BOLD | Font.ITALIC, 12));
@@ -61,6 +58,7 @@ public class ConverterView {
         calculate.add(p2);
         panel.add(calculate, BorderLayout.SOUTH);
         frame.add(panel);
+
         frame.setVisible(true);
     }
 }

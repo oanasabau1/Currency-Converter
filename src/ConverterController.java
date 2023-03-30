@@ -9,30 +9,22 @@ public class ConverterController implements ActionListener, ItemListener {
         this.model = model;
         this.view=view;
 
-        // Add action listener for convert button
+        //Register listeners
         view.convert.addActionListener(this);
-
-        // Add item listeners for JComboBoxes
         view.toConvert.addItemListener(this);
         view.toBeConverted.addItemListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // Check if convert button was clicked
         if (e.getSource() == view.convert) {
-            // Get selected currencies from JComboBoxes
             String fromCurrency = (String) view.toConvert.getSelectedItem();
             String toCurrency = (String) view.toBeConverted.getSelectedItem();
-
-            // Validate input
             String input = view.initialSum.getText();
             if (input.isEmpty()) {
                 JOptionPane.showMessageDialog(view.frame, "Please enter a valid input", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-
-            // Convert input to double
             double amount;
             try {
                 amount = Double.parseDouble(input);
@@ -41,7 +33,6 @@ public class ConverterController implements ActionListener, ItemListener {
                 return;
             }
 
-            // Convert currency and update final result text field
             double result = model.convertCurrency(amount, fromCurrency, toCurrency);
             view.finalResult.setText(String.format("%.2f", result));
         }
@@ -50,14 +41,17 @@ public class ConverterController implements ActionListener, ItemListener {
     @Override
     public void itemStateChanged(ItemEvent e) {
         if (e.getStateChange() == ItemEvent.SELECTED) {
-            // Get selected currencies from JComboBoxes
             String fromCurrency = (String) view.toConvert.getSelectedItem();
             String toCurrency = (String) view.toBeConverted.getSelectedItem();
-
-            // Update initial value label and message label based on selected currencies
-            view.initialValue.setText(fromCurrency);
-            view.message.setText(String.format("1 %s = %s %s", fromCurrency, toCurrency));
-
+            if (fromCurrency.equals("Please choose a currency unit...") || toCurrency.equals("Please choose a currency unit...")) { //do nothing
+                view.message.setText("Currency Converter");
+            }
+            else {
+                //set the labels with the money units
+                view.initialValue.setText(fromCurrency.substring(0, 3));
+                view.finalValue.setText(toCurrency.substring(0, 3));
+                view.message.setText("1 " + fromCurrency.substring(0, 3) + " = " + model.selectValueForConversion(fromCurrency, toCurrency) + " " + toCurrency.substring(0, 3));
+            }
         }
     }
 }
