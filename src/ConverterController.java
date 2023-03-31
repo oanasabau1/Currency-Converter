@@ -44,6 +44,8 @@ public class ConverterController implements ActionListener, ItemListener {
             String toCurrency = (String) view.toBeConverted.getSelectedItem();
             if (fromCurrency.equals("Please choose a currency unit...") || toCurrency.equals("Please choose a currency unit...")) { //do nothing
                 view.message.setText("Currency Converter");
+                view.initialValue.setText("");
+                view.finalValue.setText("");
             }
             else {
                 //set the labels according the selections made
